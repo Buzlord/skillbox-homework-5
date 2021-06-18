@@ -162,20 +162,27 @@ html {
   transform: translateY(-1px);
 }
 /* what we do */
+
 .section__do {
   padding-top: 140px;
   padding-bottom: 100px;
   border-bottom: 1px solid #e4e4e4;
 }
-.section__do__icon {
-  margin-bottom: 30px;
-}
+
 .section__description {
   margin-top: 25px;
 }
 .section__do__list {
   margin-top: 50px;
   display: flex;
+}
+.section__do__item:hover {
+  background-color: #3172b9;
+  color: white;
+  cursor: pointer;
+}
+.section__do__item:hover .section__do__item__description {
+  color: white;
 }
 .section__do__item {
   border: 1px solid #e5e5e5;
@@ -186,10 +193,16 @@ html {
   align-items: center;
   flex: 1 1 25%;
 }
+.section__do__item:hover .section__do__icon path {
+  fill: white;
+}
+.section__do__icon {
+  margin-bottom: 30px;
+}
 .section__do__item:not(:last-child) {
   margin-right: 30px;
 }
-.section__do__item__secription {
+.section__do__item__description {
   margin-top: 0;
   text-align: center;
   font-size: 14px;
@@ -408,4 +421,14 @@ html {
   width: 24px;
   height: 18px;
   background-image: url("../img/Email@2x.svg");
+}
+
+@media (max-width: 768px) {
+  .section__do__list {
+    display: block;
+  }
+  .section__do__item:not(:last-child) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
 }
